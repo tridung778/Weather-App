@@ -122,6 +122,7 @@ function fetchData() {
     windSpeed.innerText = data.wind.speed;
     waterWet.innerText = data.main.humidity;
     description.innerText = data.weather[0].description;
+    console.log(data);
   });
 }
 
