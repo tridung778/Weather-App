@@ -16,6 +16,13 @@ const newsKeyAPI = "pub_416261ad502396998c6b011aa663341a0a1c9";
 var lat = "";
 var lon = "";
 
+// Bắt đầu lấy tin tức với từ khóa ngẫu nhiên khi trang được tải
+window.onload = () => {
+  getLocation();
+  getTime();
+  getRandomNews();
+};
+
 // Tạo một biến để lưu trữ danh sách các từ khóa
 let keywords = [];
 
@@ -76,13 +83,6 @@ async function getNews(keyWord) {
     console.error("Lỗi khi lấy tin tức:", error);
   }
 }
-
-// Bắt đầu lấy tin tức với từ khóa ngẫu nhiên khi trang được tải
-window.onload = () => {
-  getLocation();
-  getTime();
-  getRandomNews();
-};
 
 function getTime() {
   var t = new Date();
